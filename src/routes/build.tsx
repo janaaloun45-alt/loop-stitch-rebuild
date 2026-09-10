@@ -220,13 +220,13 @@ function Build() {
             {step === 2 && (
               <section className="bg-surface-container-lowest rounded-[2rem] p-stack-md card-shadow space-y-3">
                 <h2 className="text-headline-md text-on-surface mb-stack-sm">Review Your LOOP</h2>
-                <Row label={`Base — ${baseObj.label} (${color})`} value={`$${baseObj.price}`} />
+                <Row label={`Base — ${baseObj.label} (${color})`} value={`KWD ${baseObj.price}`} />
                 {picked.map((id) => {
                   const c = charms.find((x) => x.id === id)!;
-                  return <Row key={id} label={`Charm — ${c.label}`} value={`$${c.price}`} />;
+                  return <Row key={id} label={`Charm — ${c.label}`} value={`KWD ${c.price}`} />;
                 })}
                 {beads.length > 0 && (
-                  <Row label={`Beads — ${beads.join(" ")}`} value={`$${beads.length * 5}`} />
+                  <Row label={`Beads — ${beads.join(" ")}`} value={`KWD ${beads.length * 5}`} />
                 )}
                 <div className="border-t border-outline-variant pt-3 flex justify-between text-headline-md text-on-surface">
                   <span>Total</span>
