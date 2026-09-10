@@ -134,7 +134,7 @@ function Build() {
                           <img src={b.image} alt={b.label} className="w-full h-full object-cover" />
                         </div>
                         <p className="text-label-lg text-on-surface">{b.label}</p>
-                        <p className="text-body-md text-on-surface-variant">${b.price}</p>
+                        <p className="text-body-md text-on-surface-variant">KWD {b.price}</p>
                       </button>
                     ))}
                   </div>
@@ -230,7 +230,7 @@ function Build() {
                 )}
                 <div className="border-t border-outline-variant pt-3 flex justify-between text-headline-md text-on-surface">
                   <span>Total</span>
-                  <span>${total}</span>
+                  <span>KWD {total}</span>
                 </div>
               </section>
             )}
@@ -316,7 +316,7 @@ function Build() {
               }`}
             >
               <span>{added ? "ADDED ✓" : "ADD MY LOOP TO CART"}</span>
-              <span className="opacity-80">${total}</span>
+              <span className="opacity-80">KWD {total}</span>
             </button>
           </aside>
         </div>

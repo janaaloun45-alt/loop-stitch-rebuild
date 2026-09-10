@@ -254,7 +254,7 @@ function ProductCard({ product }: { product: Product }) {
               : "bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container"
           }`}
         >
-          {added ? "Added ✓" : `Add to Bag - $${product.price}`}
+          {added ? "Added ✓" : `Add to Bag - KWD {product.price}`}
         </button>
       </div>
       <div className="flex flex-col mt-2">

@@ -50,7 +50,7 @@ function Cart() {
                   <div className="flex-1">
                     <p className="text-headline-md text-on-surface">{line.name}</p>
                     <p className="text-body-md text-on-surface-variant">
-                      Qty {line.qty} · ${line.price}
+                      Qty {line.qty} · KWD {line.price}
                     </p>
                   </div>
                   <button
@@ -67,7 +67,7 @@ function Cart() {
               <h2 className="text-headline-md text-on-surface">Order Summary</h2>
               <div className="flex justify-between text-body-md text-on-surface-variant">
                 <span>Subtotal</span>
-                <span>${cartTotal.toFixed(2)}</span>
+                <span>KWD {cartTotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-body-md text-on-surface-variant">
                 <span>Shipping</span>
@@ -75,7 +75,7 @@ function Cart() {
               </div>
               <div className="border-t border-outline-variant pt-4 flex justify-between text-headline-md text-on-surface">
                 <span>Total</span>
-                <span>${cartTotal.toFixed(2)}</span>
+                <span>KWD {cartTotal.toFixed(2)}</span>
               </div>
               <a
                 href="https://buy.stripe.com/test_8x29AV4SMc486rh55Z3Ru00"

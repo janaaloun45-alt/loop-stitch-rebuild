@@ -150,7 +150,7 @@ function TrendingCard({
       </div>
       <div className="space-y-2">
         <h3 className="text-headline-md text-on-surface">{product.name}</h3>
-        <p className="text-body-md text-on-surface-variant">${product.price.toFixed(2)}</p>
+        <p className="text-body-md text-on-surface-variant">KWD {product.price.toFixed(2)}</p>
         <button
           onClick={() => {
             addToCart({ id: product.id, name: product.name, price: product.price, image: product.image });
