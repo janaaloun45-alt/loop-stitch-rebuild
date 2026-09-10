@@ -51,7 +51,7 @@ const steps = ["Base", "Charms", "Review"];
 
 function Build() {
   const [step, setStep] = useState(0);
-  const [base, setBase] = useState(bases[0].id);
+  const [base, setBase] = useState(bases[0]!.id);
   const [color, setColor] = useState("cherry");
   const [picked, setPicked] = useState<string[]>(["cherry"]);
   const [beads, setBeads] = useState<string[]>([]);
