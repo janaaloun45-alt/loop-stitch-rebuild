@@ -26,8 +26,8 @@ export const Route = createFileRoute("/")({
 });
 
 const trending = [
-  { id: "cherry-loop", name: "Cherry LOOP", price: 24, image: img.cherryLoop },
-  { id: "pearl-loop", name: "Pearl LOOP", price: 28, image: img.pearlLoop },
+  { id: "cherry-loop", name: "Cherry LOOP", price: 5, image: img.cherryLoop },
+  { id: "pearl-loop", name: "Pearl LOOP", price: 5, image: img.pearlLoop },
 ];
 
 function Home() {

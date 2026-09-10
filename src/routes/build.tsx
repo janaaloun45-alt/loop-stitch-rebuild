@@ -25,9 +25,9 @@ export const Route = createFileRoute("/build")({
 });
 
 const bases = [
-  { id: "chunky-chain", label: "Chunky Chain", price: 24, image: img.catChains },
-  { id: "beaded-strand", label: "Beaded Strand", price: 22, image: img.catCharms },
-  { id: "wristlet", label: "Wristlet", price: 26, image: img.catConnectors },
+  { id: "chunky-chain", label: "Chunky Chain", price: 5, image: img.catChains },
+  { id: "beaded-strand", label: "Beaded Strand", price: 5, image: img.catCharms },
+  { id: "wristlet", label: "Wristlet", price: 5, image: img.catConnectors },
 ];
 
 const baseColors = [
@@ -38,11 +38,11 @@ const baseColors = [
 ];
 
 const charms = [
-  { id: "cherry", label: "Cherry", price: 8, image: img.charmCherry },
-  { id: "star", label: "Star", price: 6, image: img.charmStar },
-  { id: "smiley", label: "Smiley", price: 6, image: img.charmSmiley },
-  { id: "heart", label: "Glitter Heart", price: 7, image: img.glitterHeart },
-  { id: "pearl", label: "Pearl Drop", price: 9, image: img.pearlDrop },
+  { id: "cherry", label: "Cherry", price: 5, image: img.charmCherry },
+  { id: "star", label: "Star", price: 5, image: img.charmStar },
+  { id: "smiley", label: "Smiley", price: 5, image: img.charmSmiley },
+  { id: "heart", label: "Glitter Heart", price: 5, image: img.glitterHeart },
+  { id: "pearl", label: "Pearl Drop", price: 5, image: img.pearlDrop },
 ];
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -64,7 +64,7 @@ function Build() {
     () =>
       baseObj.price +
       picked.reduce((n, id) => n + (charms.find((c) => c.id === id)?.price ?? 0), 0) +
-      beads.length * 4,
+      beads.length * 5,
     [baseObj, picked, beads],
   );
 
@@ -226,7 +226,7 @@ function Build() {
                   return <Row key={id} label={`Charm — ${c.label}`} value={`$${c.price}`} />;
                 })}
                 {beads.length > 0 && (
-                  <Row label={`Beads — ${beads.join(" ")}`} value={`$${beads.length * 4}`} />
+                  <Row label={`Beads — ${beads.join(" ")}`} value={`$${beads.length * 5}`} />
                 )}
                 <div className="border-t border-outline-variant pt-3 flex justify-between text-headline-md text-on-surface">
                   <span>Total</span>
