@@ -77,9 +77,12 @@ function Cart() {
                 <span>Total</span>
                 <span>${cartTotal.toFixed(2)}</span>
               </div>
-              <button className="btn-primary w-full text-label-lg py-4 rounded-full shadow-soft">
+              <a
+                href="https://buy.stripe.com/test_8x29AV4SMc486rh55Z3Ru00"
+                className="btn-primary w-full text-label-lg py-4 rounded-full shadow-soft text-center block"
+              >
                 Checkout
-              </button>
+              </a>
               <Link
                 to="/shop"
                 className="block text-center text-label-lg text-primary hover:underline underline-offset-4"
