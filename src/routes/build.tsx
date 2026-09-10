@@ -51,7 +51,7 @@ const steps = ["Base", "Charms", "Review"];
 
 function Build() {
   const [step, setStep] = useState(0);
-  const [base, setBase] = useState(bases[0].id);
+  const [base, setBase] = useState(bases[0]!.id);
   const [color, setColor] = useState("cherry");
   const [picked, setPicked] = useState<string[]>(["cherry"]);
   const [beads, setBeads] = useState<string[]>([]);
@@ -59,7 +59,7 @@ function Build() {
   const { addToCart } = useLoop();
   const navigate = useNavigate();
 
-  const baseObj = bases.find((b) => b.id === base)!;
+  const baseObj = bases.find((b) => b.id === base) ?? bases[0]!;
   const total = useMemo(
     () =>
       baseObj.price +
