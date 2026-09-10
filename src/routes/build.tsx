@@ -59,7 +59,7 @@ function Build() {
   const { addToCart } = useLoop();
   const navigate = useNavigate();
 
-  const baseObj = bases.find((b) => b.id === base)!;
+  const baseObj = bases.find((b) => b.id === base) ?? bases[0];
   const total = useMemo(
     () =>
       baseObj.price +

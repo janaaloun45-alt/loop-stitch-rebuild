@@ -7,9 +7,10 @@ import { products, useLoop, type Product } from "@/lib/loop-store";
 type ShopSearch = { q?: string };
 
 export const Route = createFileRoute("/shop")({
-  validateSearch: (search: Record<string, unknown>): ShopSearch => ({
-    q: typeof search.q === "string" && search.q.length ? search.q : undefined,
-  }),
+  validateSearch: (search: Record<string, unknown>): ShopSearch => {
+    const q = typeof search["q"] === "string" && search["q"].length ? search["q"] : undefined;
+    return q ? { q } : {};
+  },
   head: () => ({
     meta: [
       { title: "Shop All Charms — LOOP" },
@@ -44,7 +45,7 @@ const colorSwatches = [
 ] as const;
 
 function ShopAll() {
-  const { q } = Route.useSearch();
+  const q = Route.useSearch()["q"];
   const navigate = useNavigate();
   const [category, setCategory] = useState<string>("All Charms");
   const [color, setColor] = useState<string | null>("cherry");
